@@ -5,7 +5,32 @@ Github : github.com/slashbinslashnoname/gnoland_cheatsheet
 You need gnokey to make queries `./gnokey query` and transactions `./gnokey maketx`.
 You can build and install gnokey following this tutorial : https://gnoland.space/start/create-wallet
 
-## Parameters
+
+
+
+## Installing Gnokey and Gnodev
+
+Compiling and installing gnokey is *really* easy.
+
+
+### Compiling
+````
+git clone git@github.com:gnolang/gno.git
+cd ./gno
+make
+````
+
+### Installing gnodev
+
+``` make install_gnodev```
+
+
+### Installing gnokey
+
+``` make install_gnokey```
+
+
+## Parameters for the next step
 For testnet "test2"
 
 I used to send transactions with these parameters.
