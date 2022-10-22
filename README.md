@@ -1,5 +1,6 @@
 # Gnoland Cheatsheet
 
+Github : github.com/slashbinslashnoname/gnoland_cheatsheet
 
 You need gnokey to make queries `./gnokey query` and transactions `./gnokey maketx`.
 You can build and install gnokey following this tutorial : https://gnoland.space/start/create-wallet
@@ -10,6 +11,7 @@ For testnet "test2"
 I used to send transactions with these parameters.
 * Min fee : 1ugnot
 * Gas : 15000000 (reimbursed if not used)
+
 
 
 ## Account
@@ -118,7 +120,7 @@ Use the args gotten previously (`1461` in our example)
 ./gnokey maketx call g1ah79e3txw2kd2e8dscr2y2ucr888lm3qwm3v6e --pkgpath "gno.land/r/boards" --func "CreateThread" --gas-fee 1000ugnot --gas-wanted 4000000 --broadcast true --chainid test2 --args "1461" --args "Hire me" --args "https://twitter.com/slashbin_fr" --remote test2.gno.land:36657
 ```
 
-### Render the board
+### Render the Board
 
 > Notice that we got rid of the newline \n, it works well too  
 
@@ -126,6 +128,23 @@ Use the args gotten previously (`1461` in our example)
 ./gnokey query "vm/qrender" --data "gno.land/r/boards            
 slashbin" --remote test2.gno.land:36657
 ```
+
+
+### Create a reply
+
+> Notice the higher gas fee. I used the next step to verify why the transaction was not validated.
+```
+./gnokey maketx call g1ah79e3txw2kd2e8dscr2y2ucr888lm3qwm3v6e --pkgpath "gno.land/r/boards" --func "CreateReply" --gas-fee 1ugnot --gas-wanted 5000000  --broadcast true --chainid test2 --args "1461" --args "1" --args "1" --args "https://github.com/slashbinslashnoname/gnoland_cheatsheet" --remote test2.gno.land:36657
+```
+
+
+## Verifying your transaction
+
+
+You can verify your transaction by using rpc.gno.tools with the tx.height used to debug your transaction.
+
+https://rpc.gno.tools/tx_search?query="tx.height=202977"
+
 
 ## Outro
 
