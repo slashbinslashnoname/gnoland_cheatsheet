@@ -118,7 +118,7 @@ Use the args gotten previously (`1461` in our example)
 ./gnokey maketx call g1ah79e3txw2kd2e8dscr2y2ucr888lm3qwm3v6e --pkgpath "gno.land/r/boards" --func "CreateThread" --gas-fee 1000ugnot --gas-wanted 4000000 --broadcast true --chainid test2 --args "1461" --args "Hire me" --args "https://twitter.com/slashbin_fr" --remote test2.gno.land:36657
 ```
 
-### Render the thread
+### Render the board
 
 > Notice that we got rid of the newline \n, it works well too  
 
